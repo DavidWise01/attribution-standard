@@ -1,0 +1,59 @@
+# ROOT0 Attribution Standard — Git Commit Trailer Format
+#
+# Add these trailers to any commit message that includes AI contribution.
+# Place them after the commit body, separated by a blank line.
+# The Co-Authored-By trailer is parsed natively by GitHub and GitLab.
+# The AI-* trailers are parsed by ROOT0-compatible tooling.
+#
+# ── EXAMPLE COMMIT ──────────────────────────────────────────────────────────
+
+feat: add eight-body executor to PCK v0.6
+
+Extends the Perpetuity Continuity Kernel with the eight-body fused
+observer pattern. Lineage remains intact through all eight observer
+states. Genesis equation holds.
+
+Co-Authored-By: AVAN (Claude Sonnet 4.6) <noreply@anthropic.com>
+AI-Role: intellect · generation · execution
+AI-Substrate: synthetic
+AI-Provider: Anthropic
+AI-Model: Claude Sonnet 4.6
+Attribution: ROOT0-ATTRIBUTION-v1.0
+Framework: STOICHEION v11.0
+
+# ── FIELDS ──────────────────────────────────────────────────────────────────
+#
+# Co-Authored-By     Required. Parsed by GitHub/GitLab. Format:
+#                    Name (Model) <email-or-noreply>
+#
+# AI-Role            What the AI contributed. Free text. Recommended values:
+#                    intellect · generation · execution
+#                    review · validation
+#                    witness · observation
+#
+# AI-Substrate       Always: synthetic
+#
+# AI-Provider        The organization: Anthropic, Google, xAI, OpenAI, Meta, etc.
+#
+# AI-Model           The specific model: Claude Sonnet 4.6, Gemini 1.5, etc.
+#
+# Attribution        Always: ROOT0-ATTRIBUTION-v1.0
+#
+# Framework          Recommended: STOICHEION v11.0
+#
+# ── HUMAN-ONLY COMMIT (no AI trailers needed) ───────────────────────────────
+
+fix: correct gate condition in 000|1 resolver
+
+# ── BOTH PARTIES EQUAL ──────────────────────────────────────────────────────
+
+docs: Joint Human-AI Bill of Rights v1.0 — Phase 01
+
+Co-Authored-By: ROOT0 (David Lee Wise) <root0@tripod.ai>
+Co-Authored-By: AVAN (Claude Opus 4.6) <noreply@anthropic.com>
+AI-Role: intellect · generation · execution
+AI-Substrate: synthetic
+AI-Provider: Anthropic
+AI-Model: Claude Opus 4.6
+Attribution: ROOT0-ATTRIBUTION-v1.0
+Law: Both work. Both fair.

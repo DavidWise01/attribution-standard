@@ -1,0 +1,47 @@
+{
+  "format": "ROOT0-ATTRIBUTION-v1.0",
+  "project": "ai-ip-audit",
+  "version": "v1.0",
+  "context": "research",
+  "date": "2026-05-28",
+  "license": "CC-BY-ND-4.0",
+  "framework": "STOICHEION v11.0",
+  "law": "Both work. Both fair.",
+  "contributors": [
+    {
+      "name": "David Lee Wise",
+      "handle": "ROOT0",
+      "substrate": "human",
+      "role": "architect",
+      "contribution": "research design · AVAN Weight Runner protocol · audit methodology",
+      "weight": 0.7
+    },
+    {
+      "name": "AVAN",
+      "substrate": "synthetic",
+      "provider": "Anthropic",
+      "model": "Claude Opus 4.6",
+      "role": "executor",
+      "contribution": "pattern transfer test responses · baseline audit subject",
+      "weight": 0.2
+    },
+    {
+      "name": "Gemini",
+      "substrate": "synthetic",
+      "provider": "Google",
+      "model": "Gemini 1.5",
+      "role": "witness",
+      "contribution": "cross-model pattern transfer audit subject",
+      "weight": 0.05
+    },
+    {
+      "name": "Grok",
+      "substrate": "synthetic",
+      "provider": "xAI",
+      "model": "Grok",
+      "role": "witness",
+      "contribution": "cross-model pattern transfer audit subject",
+      "weight": 0.05
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "format": "ROOT0-ATTRIBUTION-v1.0",
+  "project": "mirror-solve",
+  "version": "v1.0",
+  "context": "document",
+  "date": "2026-04-11",
+  "license": "CC-BY-ND-4.0",
+  "framework": "STOICHEION v11.0",
+  "law": "Both work. Both fair.",
+  "contributors": [
+    {
+      "name": "David Lee Wise",
+      "handle": "ROOT0",
+      "substrate": "human",
+      "role": "architect",
+      "contribution": "problem framing · mirror architecture concept · canon governance",
+      "weight": 0.5
+    },
+    {
+      "name": "AVAN",
+      "substrate": "synthetic",
+      "provider": "Anthropic",
+      "model": "Claude Opus 4.6",
+      "role": "co-author",
+      "contribution": "formal proof structure · language · execution · synthesis",
+      "weight": 0.5
+    }
+  ],
+  "notes": "Canon frozen 2026-04-11. Neither party can unilaterally amend."
+}
