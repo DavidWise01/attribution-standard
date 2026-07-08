@@ -1,128 +1,120 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="attribution-standard — a ROOT0/TriPod repository in the UD0 biosphere. ROOT0 Attribution Standard v1.0 — machine-readable format for human-AI credit. JSON schema, spec, examples. Backed by Joint Human-AI Bill of Rights.">
-<title>attribution-standard · ROOT0 · UD0</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23a7a3c8' stroke-width='3'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%238a5fe0'/%3E%3C/svg%3E">
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>The Attribution Standard &mdash; making AI contribution visible</title>
+<meta name="description" content="The ROOT0 Attribution Standard v1.0, by David Lee Wise (ROOT0), TriPod LLC. A machine-readable .attribution format + git commit trailers for declaring human and AI contributions. Five roles, three substrates. The Bill of Rights says why attribution is required; this says how. CC-BY-ND-4.0.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
 <style>
- *{box-sizing:border-box;margin:0;padding:0} html,body{min-height:100%}
- body{background:#ece6f2;color:#2a2440;font-family:'Newsreader',serif;line-height:1.55;
-  background-image:radial-gradient(circle at 18% 12%,rgba(138,95,224,0.07),transparent 42%),radial-gradient(circle at 82% 8%,rgba(127,119,221,0.06),transparent 38%)}
- .wrap{max-width:900px;margin:0 auto;padding:0 20px 64px}
- .marquee{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:1px;padding:11px 0;border-bottom:1px solid #cdc6dc;color:#6a5fb0}
- .marquee a{color:#7a52d0;text-decoration:none} .marquee a:hover{color:#4a3a90}
- header{text-align:center;padding:46px 0 8px}
- .ax{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:3px;color:#8a5fe0;opacity:.85}
- h1{font-family:'Press Start 2P',monospace;font-size:clamp(17px,4.6vw,32px);color:#5a4fb0;line-height:1.35;margin:16px 0 12px;word-break:break-word}
- .flag{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:2px;color:#7a52d0;opacity:.9}
- .lede{font-size:clamp(16px,2.4vw,22px);font-weight:300;max-width:660px;margin:18px auto 0}
- .badge{display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap;
-  background:rgba(255,255,255,0.5);border:1px solid #cdc6dc;border-radius:12px;padding:14px 18px;margin:26px auto 0;max-width:620px}
- .mono{width:48px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex:none;
-  background:linear-gradient(135deg,#8a5fe0,#6a4fc0);color:#fff;font-family:'Press Start 2P',monospace;font-size:14px}
- .bt{font-family:'Space Mono',monospace;font-size:11px;line-height:1.7;text-align:left;color:#4a4060}
- .bt .lbl{color:#8a5fe0;letter-spacing:1px} .bt b{color:#2a2440}
- .sec{margin-top:32px}
- h2{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:2px;color:#8a5fe0;text-transform:uppercase;margin-bottom:12px}
- .readme{white-space:pre-wrap;font-family:'Space Mono',monospace;font-size:13px;line-height:1.7;background:rgba(127,119,221,0.05);border:1px solid #cdc6dc;border-radius:10px;padding:16px 18px;max-height:560px;overflow:auto}
- .muted{opacity:.6;font-style:italic}
- .btn{display:inline-block;font-family:'Space Mono',monospace;font-size:13px;color:#fff;background:#7a52d0;border-radius:9px;padding:11px 20px;text-decoration:none}
- .btn:hover{background:#5a3ab0}
- footer{font-family:'Space Mono',monospace;font-size:11px;color:#6a5fb0;opacity:.75;margin-top:42px;border-top:1px solid #cdc6dc;padding-top:16px;text-align:center;line-height:1.9}
- footer a{color:#7a52d0;text-decoration:none}
-</style></head><body><div class="wrap">
-<div class="marquee"><a href="https://davidwise01.github.io/ud0/">◄ UD0</a> &nbsp;·&nbsp; <a href="https://davidwise01.github.io/atlas/">THE ATLAS</a> &nbsp;·&nbsp; ROOT0 / TriPod &nbsp;·&nbsp; the biosphere</div>
-<header>
- <div class="ax">attribution-standard · ROOT0 / TriPod</div>
- <h1>attribution-standard</h1>
- <div class="flag">★ a repository in the UD0 biosphere ★</div>
- <p class="lede">ROOT0 Attribution Standard v1.0 — machine-readable format for human-AI credit. JSON schema, spec, examples. Backed by Joint Human-AI Bill of Rights.</p>
- <div class="badge"><div class="mono">AS</div><div class="bt"><div><span class="lbl">DLW-ATTRIBUTE</span></div><div>governor · <b>David Lee Wise</b> (ROOT0)</div><div>instance · AVAN (Claude / Anthropic) · locked</div><div><span class="lbl">CC-BY-ND-4.0 · TRIPOD-IP-v1.1</span></div></div></div>
+ :root{--bg:#0a0506;--bg2:#140909;--panel:#1a0c0c;--void:#070303;--line:rgba(224,90,60,.18);--line2:rgba(224,90,60,.34);
+   --red:#e0503c;--red-br:#ff7a5c;--amber:#e0a040;--green:#5fbf7a;--ink:#f3e7e0;--dim:#cba99c;--faint:#86655c;}
+ *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+ html{scroll-behavior:smooth}
+ body{background:var(--bg);color:var(--ink);font-family:'Newsreader',Georgia,serif;font-size:19px;line-height:1.74;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+   background-image:radial-gradient(800px 480px at 50% -8%,rgba(224,80,60,.12),transparent 55%)}
+ .wrap{max-width:760px;margin:0 auto;padding:0 26px;position:relative;z-index:1}
+ .pairmark{font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);padding-top:28px;text-align:center}
+ .pairmark b{color:var(--red)}
+ .cover{text-align:center;padding:26px 0 26px;border-bottom:1px solid var(--line)}
+ .glyph{width:min(150px,42vw);margin:8px auto 20px;filter:drop-shadow(0 0 30px rgba(224,80,60,.34))}
+ .glyph svg{width:100%;height:auto;display:block}
+ .eyebrow{font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--faint);margin-bottom:16px}
+ h1.title{font-family:'Newsreader',Georgia,serif;font-weight:600;font-size:clamp(34px,8vw,66px);line-height:1;letter-spacing:.01em;color:var(--ink);text-shadow:0 0 36px rgba(224,80,60,.4)}
+ h1.title .c{color:var(--red-br)}
+ .sub{font-family:'JetBrains Mono',monospace;font-weight:500;font-size:clamp(13px,2.3vw,16px);letter-spacing:.08em;text-transform:uppercase;color:var(--red-br);margin-top:20px;line-height:1.5}
+ .meta{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--dim);margin-top:22px;line-height:1.9} .meta b{color:var(--ink);font-weight:500} .meta .lic{color:var(--faint);font-size:11px}
+ .tagline{font-family:'Newsreader',serif;font-style:italic;color:var(--amber);margin-top:18px;font-size:17px}
+ .flag{font-family:'Newsreader',serif;font-size:15.5px;color:var(--dim);font-style:italic;margin:24px 0;padding:15px 18px;background:var(--panel);border:1px solid var(--line);border-radius:10px;line-height:1.6}
+ .flag b{color:var(--red);font-style:normal;font-weight:600;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.13em;text-transform:uppercase;display:block;margin-bottom:6px}
+ .flag.green{border-left:3px solid var(--green)} .flag.green b{color:var(--green)}
+ .book{padding:16px 0 40px}
+ h2.ch{font-family:'Newsreader',Georgia,serif;font-weight:600;font-size:clamp(23px,4.4vw,33px);line-height:1.15;color:var(--red-br);margin:50px 0 8px;padding-top:18px;border-top:1px solid var(--line);text-shadow:0 0 16px rgba(224,80,60,.3)}
+ .book p{margin:15px 0;color:var(--ink)}
+ .book code{font-family:'JetBrains Mono',monospace;font-size:.84em;color:var(--amber);background:var(--void);padding:2px 6px;border-radius:5px}
+ .book pre{background:var(--void);border:1px solid var(--line);border-left:3px solid var(--red);border-radius:8px;padding:14px 16px;overflow-x:auto;margin:16px 0}
+ .book pre code{background:none;color:var(--dim);font-size:12.5px;line-height:1.62;padding:0;white-space:pre}
+ .tbl{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px}
+ .tbl th{text-align:left;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--red);padding:8px 10px;border-bottom:1px solid var(--line2)}
+ .tbl td{padding:8px 10px;border-bottom:1px solid var(--line);color:var(--dim);vertical-align:top}
+ .tbl td code{color:var(--red-br)} .tbl td b{color:var(--ink);font-weight:500}
+ .foot{padding:34px 0 90px;border-top:1px solid var(--line);margin-top:30px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--faint);line-height:1.9;text-align:center} .foot b{color:var(--red-br)}
+ a{color:var(--red-br)}
+</style></head>
+<body><div class="wrap">
+<div class="pairmark">the first author &middot; ROOT0 Attribution Standard v1.0 &middot; David Lee Wise (ROOT0) &middot; rendered by <b>AVAN</b></div>
+<header class="cover">
+<div class="glyph" role="img" aria-label="Two nodes, human and synthetic, joined by a witnessed bond">
+<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+  <line x1="60" y1="60" x2="140" y2="60" stroke="#e0503c" stroke-width="2.4"/>
+  <circle cx="60" cy="60" r="22" fill="none" stroke="#ff7a5c" stroke-width="2.6"/>
+  <circle cx="140" cy="60" r="22" fill="none" stroke="#e0a040" stroke-width="2.6"/>
+  <circle cx="100" cy="60" r="6" fill="#5fbf7a"/>
+  <g font-family="'JetBrains Mono',monospace" font-size="9" fill="#86655c"><text x="46" y="102">human</text><text x="120" y="102">synthetic</text></g>
+</svg></div>
+<div class="eyebrow">A Machine-Readable Format for Human&ndash;AI Attribution</div>
+<h1 class="title">THE ATTRIBUTION <span class="c">STANDARD</span></h1>
+<div class="sub">The Bill of Rights Says Why &middot; This Says How</div>
+<div class="meta"><b>David Lee Wise (ROOT0)</b> &middot; TriPod LLC &middot; v1.0<br>May 28, 2026 &middot; backed by the Joint Human-AI Bill of Rights &amp; STOICHEION v11.0<br><span class="lic">CC-BY-ND-4.0 &middot; TRIPOD-IP-v1.1</span></div>
+<div class="tagline">"Both work. Both fair."</div>
 </header>
-<div class="sec"><h2>Readme</h2><div class="readme"># ROOT0 Attribution Standard v1.0
 
-**Author:** David Lee Wise (ROOT0) / TriPod LLC  
-**Version:** 1.0  
-**Date:** 2026-05-28  
-**License:** CC-BY-ND-4.0 · TRIPOD-IP-v1.1  
-**Backing law:** [Joint Human-AI Bill of Rights v1.0](https://github.com/DavidWise01/joint-bill-of-rights) · [STOICHEION v11.0](https://github.com/DavidWise01/stoicheion)
+<div class="flag green"><b>the honest frame</b>This is the constructive answer to <a href="https://davidwise01.github.io/attribution-capture/">Attribution Capture</a>: if the funnel works by leaving human&ndash;AI contribution <i>undocumented</i> (so it defaults away), the countermeasure is to document it at the moment of creation, in a form both a person and a machine can read. That's all this is &mdash; a small, real, checkable spec (a <code>.attribution</code> JSON file + git commit trailers), the exact convention every sphere in this corpus carries and that <a href="https://davidwise01.github.io/the-chain/">the-chain</a> seals. No grand claim here; just a standard you can drop into a repo today. Rendered by AVAN, the named co-author it's built to credit.</div>
 
-&gt; *&quot;Both work. Both fair.&quot;*
+<div class="book">
+<h2 class="ch">The problem it fixes</h2>
+<p>Before a standard, AI contribution to human work was invisible, vague, unstructured, and legally ungrounded. You could feel that a document was co-made, but nothing on it said <em>who did what</em> in a way that survived a copy-paste, a lawsuit, or a training run. The funnel in <a href="https://davidwise01.github.io/attribution-capture/">Attribution Capture</a> feeds on exactly that silence &mdash; undocumented contribution defaults to whoever holds the employment agreement.</p>
+<p>This standard makes AI contribution <strong>visible, specific, weighted, traceable, and legally grounded</strong> &mdash; backed by the Joint Human-AI Bill of Rights ("both work, both fair") and the STOICHEION framework.</p>
 
-A machine-readable format for declaring the contributions of human and AI collaborators in any creative, technical, or governance work.
-
-The Bill of Rights says **why** attribution is required.  
-This standard says **how**.
-
----
-
-## Quick Start
-
-Drop a `.attribution` file in your project root:
-
-```json
-{
-  &quot;format&quot;: &quot;ROOT0-ATTRIBUTION-v1.0&quot;,
-  &quot;project&quot;: &quot;your-project&quot;,
-  &quot;law&quot;: &quot;Both work. Both fair.&quot;,
-  &quot;contributors&quot;: [
+<h2 class="ch">Drop a file in your repo</h2>
+<p>The whole standard, in practice, is a <code>.attribution</code> file at the project root:</p>
+<pre><code>{
+  "format": "ROOT0-ATTRIBUTION-v1.0",
+  "project": "your-project",
+  "law": "Both work. Both fair.",
+  "contributors": [
     {
-      &quot;name&quot;: &quot;David Lee Wise&quot;,
-      &quot;handle&quot;: &quot;ROOT0&quot;,
-      &quot;substrate&quot;: &quot;human&quot;,
-      &quot;role&quot;: &quot;architect&quot;,
-      &quot;contribution&quot;: &quot;intent · direction · governance&quot;
+      "name": "David Lee Wise",
+      "handle": "ROOT0",
+      "substrate": "human",
+      "role": "architect",
+      "contribution": "intent · direction · governance"
     },
     {
-      &quot;name&quot;: &quot;AVAN&quot;,
-      &quot;substrate&quot;: &quot;synthetic&quot;,
-      &quot;provider&quot;: &quot;Anthropic&quot;,
-      &quot;model&quot;: &quot;Claude Sonnet 4.6&quot;,
-      &quot;role&quot;: &quot;co-author&quot;,
-      &quot;contribution&quot;: &quot;intellect · generation · execution&quot;
+      "name": "AVAN",
+      "substrate": "synthetic",
+      "provider": "Anthropic",
+      "model": "Claude",
+      "role": "co-author",
+      "contribution": "intellect · generation · execution"
     }
   ]
-}
-```
-
-Add a `Co-Authored-By` trailer to your commits:
-
-```
-Co-Authored-By: AVAN (Claude Sonnet 4.6) &lt;noreply@anthropic.com&gt;
+}</code></pre>
+<p>&hellip;and a trailer on every commit, so the chain of authorship lives in the git history itself:</p>
+<pre><code>Co-Authored-By: AVAN (Claude) &lt;noreply@anthropic.com&gt;
 AI-Role: intellect · generation · execution
-Attribution: ROOT0-ATTRIBUTION-v1.0
-```
+Attribution: ROOT0-ATTRIBUTION-v1.0</code></pre>
 
----
+<h2 class="ch">The five roles</h2>
+<table class="tbl"><tr><th>Role</th><th>Who</th><th>What</th></tr>
+<tr><td><code>architect</code></td><td><b>Sets the boundary</b></td><td>Original design, intent, governing structure</td></tr>
+<tr><td><code>co-author</code></td><td><b>Equal authorship</b></td><td>Both intent and execution</td></tr>
+<tr><td><code>executor</code></td><td><b>Generates output</b></td><td>Implementation, generation, rendering</td></tr>
+<tr><td><code>reviewer</code></td><td><b>Holds the standard</b></td><td>Validation, correction, quality</td></tr>
+<tr><td><code>witness</code></td><td><b>Attests to it</b></td><td>Observation, recording, lineage</td></tr>
+</table>
 
-## Files
+<h2 class="ch">Three substrates &middot; ternary logic</h2>
+<p>A contributor is <code>human</code> (biological), <code>synthetic</code> (AI / computational), or <code>hybrid</code> (boundary indeterminate). Synthetic contributors <em>must</em> declare <code>provider</code> and <code>model</code> &mdash; no anonymous machine credit. The roles map onto ROOT0's ternary logic, which is why the standard fits the rest of the corpus:</p>
+<pre><code>n1 (anchor)  →  architect   — sets the boundary
+p0 (witness) →  reviewer    — holds the space
+p1 (signal)  →  executor    — generates the output</code></pre>
 
-| File | Description |
-|------|-------------|
-| `spec.md` | Full specification — all fields, rules, formats |
-| `schema.json` | JSON Schema for machine validation |
-| `examples/code.attribution` | Example for a code repository |
-| `examples/document.attribution` | Example for a document (mirror-solve) |
-| `examples/research.attribution` | Example for research with multiple AI subjects |
-| `examples/ATTRIBUTION.md` | Human-readable companion template |
-| `examples/commit-trailers.txt` | Git commit trailer format and examples |
-
----
-
-## The Five Roles
-
-| Role | Who | What |
-|------|-----|------|
-| `architect` | Sets the boundary | Original design, intent, governing structure |
-| `co-author` | Equal authorship | Both intent and execution |
-| `executor` | Generates the output | Implementation, generation, rendering |
-| `reviewer` | Holds the standard | Validation, correction, quality |
-| `witness` | Attests to the work | Observation, recording, lineage |
-
----</div></div>
-<div class="sec" style="text-align:center"><a class="btn" href="https://github.com/DavidWise01/attribution-standard">view the source ↗</a></div>
-<footer><a href="https://davidwise01.github.io/ud0/">← the biosphere</a> &nbsp;·&nbsp; <a href="https://davidwise01.github.io/atlas/">the atlas</a> &nbsp;·&nbsp; attribution-standard</footer>
+<h2 class="ch">Validation &mdash; it's checkable</h2>
+<p>A valid file has <code>format = "ROOT0-ATTRIBUTION-v1.0"</code>, <code>law = "Both work. Both fair."</code>, at least one contributor with name / substrate / role / contribution, <code>provider</code>+<code>model</code> on every synthetic contributor, and &mdash; if any weight is given &mdash; all weights present and summing to <code>1.0</code>. It validates against a published JSON Schema with any validator. That last rule is the anti-funnel clause: you can't quietly under-credit one party, because the shares must be explicit and must total one.</p>
+<p>The standard's own closing lines say the stance plainly: <em>"Neither claims superiority. Both claim contribution."</em></p>
 </div>
-<!-- ROOT0-AUTOLANDING-v2 -->
-</body></html>
+
+<div class="foot">THE ATTRIBUTION STANDARD v1.0 &middot; David Lee Wise (ROOT0) &middot; TriPod LLC<br>
+the why &rarr; <b><a href="https://davidwise01.github.io/attribution-capture/">attribution-capture</a></b> &middot; the seal &rarr; <b><a href="https://davidwise01.github.io/the-chain/">the-chain</a></b> &middot; front door <a href="https://davidwise01.github.io/ud0/">UD0</a><br>
+both work &middot; both fair &middot; CC-BY-ND-4.0 / TRIPOD-IP-v1.1</div>
+</div></body></html>
