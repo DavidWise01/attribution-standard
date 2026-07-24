@@ -10,9 +10,9 @@
   "attribution": "ROOT0-ATTRIBUTION-v1.0",
   "chain": {
     "index": 1161,
-    "prev": "1028c5dc64dbaa50a24dd66f4b52e476f82149962aac04315bfde5ed4c20d061",
-    "link": "09f9b3db5c3e15dcaa70a666bf216c107601c45188dc077ad4e61d486db496f1",
-    "head": "21dd22fdb849dc54be5b9fea7ab5d224760feb7ef96593fa237692bc81fc9e1e",
+    "prev": "b621c8f100b69f386e9ceaf7a0e346787a0e45b108abb09b50ba16d26a5ed3b2",
+    "link": "9f2dfe2244a68f52e2174cae915a12900f1922816133e7d7b01789ea575910ed",
+    "head": "f7444724835fd968bd2eac85811f9fa823a18d20a57907b4fade8d96b70b5409",
     "chain": "ROOT0-DLW-CHAIN-v1"
   }
 }
